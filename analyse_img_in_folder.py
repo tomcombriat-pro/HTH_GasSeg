@@ -17,15 +17,20 @@ from src.ellipsis import *
 
 useSAM = False
 segmentation_method = "ML"
+model_name = "cB_Natalia_intensity.pic"
 if (len(sys.argv)>2): #we have extra arguments
     for i in range(2,len(sys.argv)):
         if (sys.argv[i] == "-useSAM"):
             useSAM = True
             segmentation_method = "SAM"
-            print("/!\ Using SAM")
+            print("/!\\ Using SAM")
         if (sys.argv[i] == "-useMIX"):
             segmentation_method = "MIX"
-            print("/!\ Using MIX SAM/ML")        
+            print("/!\\ Using MIX SAM/ML")
+        if (sys.argv[i] == "-model"):
+            model_name = sys.argv[i+1]
+            print("/!\\ Using the model:" + model_name)
+        
             
 
 
@@ -34,14 +39,14 @@ if (len(sys.argv)>2): #we have extra arguments
 #segmenter_file = open("trained_models"+os.sep+"cB_incucyte_blur.pic","rb") # Note: not the same than for the widefield
 
 if (segmentation_method == "ML"):
-    segmenter_file = open("trained_models"+os.sep+"cB_Natalia_intensity.pic","rb") # Note: not the same than for the widefield
+    segmenter_file = open("trained_models"+os.sep+model_name,"rb") # Note: not the same than for the widefield
     Segmenter = pickle.load(segmenter_file)
     segmenter_file.close()
 elif (segmentation_method == "SAM"):
     Segmenter = get_sam_segmenter()
 
 elif (segmentation_method == "MIX"):
-    segmenter_file = open("trained_models"+os.sep+"cB_Natalia_intensity.pic","rb") # Note: not the same than for the widefield
+    segmenter_file = open("trained_models"+os.sep+model_name,"rb") # Note: not the same than for the widefield
     Segmenter_ML = pickle.load(segmenter_file)
     segmenter_file.close()
     Segmenter_SAM = get_sam_segmenter()

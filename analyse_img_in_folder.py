@@ -22,14 +22,14 @@ HTH, University of Oslo
 
 This script performs the segmentation of the gastruloid, divides it into 10 segments and computes the area and fluorescence intensities for each segment.
 
-Dependencies of this script use some code adapted from Morgana and do not claim any authorship on these (see src/midline.py)
+Dependencies of this script use some code adapted from MOrgAna and do not claim any authorship on these (see src/midline.py)
 https://github.com/LabTrivedi/MOrgAna/blob/master/morgana/ImageTools/morphology/computemorphology.py
 https://github.com/LabTrivedi/MOrgAna/blob/master/morgana/ImageTools/straightmorphology/computestraightmorphology.py
 
 Usage:
 ./analyse_img_in_folder.py folder -args
 with:
- - folder being where the data is stored. It should contain at least one subfolder "BF" containing the brightfield images. "Red" and "Green" subfolders can also be present if the intensities of fluorescence in these channels should be computed.
+ - folder being where the data is stored. It should contain at least one subfolder "BF" containing the brightfield images. "Red" and "Green" subfolders can also be present if the intensities of fluorescence in these channels should be computed. For each file in the folder "BF", fluorescence images in the "Red" and "Green" folders should have *exactly* the same name.
  - -args can be use to select the segmentation method and the model to use. The segmentation method can be chosen by passing "-useSAM" or "-useMIX". If none is given, a pure machine learning model is used. "-useSAM" uses only the Segment Anything Model to segment the gastruloid whereas "-useMIX" uses a combination of ML and SAM, using ML to guide SAM towards interesting objects.
  - -model XXX can be used to select another ML model than the default one. XXX should be the filename of the model contained in the "trained_models" folder, and generated with the "train_Segmenter.py" script.
 

@@ -22,6 +22,10 @@ HTH, University of Oslo
 
 This script performs the segmentation of the gastruloid, divides it into 10 segments and computes the area and fluorescence intensities for each segment.
 
+Dependencies of this script use some code adapted from Morgana and do not claim any authorship on these (see src/midline.py)
+https://github.com/LabTrivedi/MOrgAna/blob/master/morgana/ImageTools/morphology/computemorphology.py
+https://github.com/LabTrivedi/MOrgAna/blob/master/morgana/ImageTools/straightmorphology/computestraightmorphology.py
+
 Usage:
 ./analyse_img_in_folder.py folder -args
 with:

@@ -15,6 +15,28 @@ from src.ImUtils import *
 from src.ellipsis import *
 
 
+
+"""
+Copyright: Combriat Thomas, 2026
+HTH, University of Oslo
+
+This script performs the segmentation of the gastruloid, divides it into 10 segments and computes the area and fluorescence intensities for each segment.
+
+Usage:
+./analyse_img_in_folder.py folder -args
+with:
+ - folder being where the data is stored. It should contain at least one subfolder "BF" containing the brightfield images. "Red" and "Green" subfolders can also be present if the intensities of fluorescence in these channels should be computed.
+ - -args can be use to select the segmentation method and the model to use. The segmentation method can be chosen by passing "-useSAM" or "-useMIX". If none is given, a pure machine learning model is used. "-useSAM" uses only the Segment Anything Model to segment the gastruloid whereas "-useMIX" uses a combination of ML and SAM, using ML to guide SAM towards interesting objects.
+ - -model XXX can be used to select another ML model than the default one. XXX should be the filename of the model contained in the "trained_models" folder, and generated with the "train_Segmenter.py" script.
+
+Output:
+This script creates two folders, alongside the data:
+ - results, which will contain a single text file with the numerical values of the results.
+ - masks, which will contain visuals of the generated masks with simple graphs for sanity checks.
+"""
+
+
+
 useSAM = False
 segmentation_method = "ML"
 model_name = "cB_Natalia_intensity.pic"
@@ -52,7 +74,7 @@ elif (segmentation_method == "MIX"):
     Segmenter_SAM = get_sam_segmenter()
 
 
-curved_midline = True
+curved_midline = True ## if true we do not assume that the gastruloid can be fitted by an ellipse.
 
 
 

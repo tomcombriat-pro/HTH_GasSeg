@@ -5,6 +5,17 @@ Copyright: Combriat Thomas, 2026
 HTH, University of Oslo
 
 This script trains a classifier on pre-labelled data for segmentation.
+
+Usage:
+
+./train_Segmenter.py input_folder output_name -args
+
+with:
+ - input_folder: a folder containing images and corresponding labels. Label images should be appended with _labels in their filenames for instance: "image1.tif" and "image1_labels.tif".
+ - output_name: the name of the model which will produced. This model will be stored in the folder "trained_models"
+ - -args can be:
+   - -GPU to use the GPU for training
+   - -N_it ### to train with ### epochs.
 """
 
 

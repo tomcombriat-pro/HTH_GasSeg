@@ -38,4 +38,6 @@ The script outputs both a global text file that contains the results and which i
 |VID9152_A3_1_2024y09m14d_16h49m.tif|324919|872.698925|22566|0.000000|0.000000|31994|0.000000|0.000000|49236|0.000000|0.000000|52750|0.000000|0.000000|42570|0.000000|0.000000|35679|0.000000|0.000000|30334|0.000000|0.000000|25252|0.000000|0.000000|21259|0.000000|0.000000|13279|0.000000|0.000000|
 
 
+It also outputs some images that can be used to visually assess the performances of the algorithms. These images are places in a subfolder `masks` alongside the data.
+
 ![](img/ex_output.png)

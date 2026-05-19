@@ -32,8 +32,8 @@ Informations on how to run the different scripts are given at the top of the fil
 
 The script outputs both a global text file that contains the results and which is placed in a folder `results` alongside the data:
 
-|#File|Area|MidLineLength||Seg0_Area|MeanRed|MeanGreen|Seg1_Area|MeanRed|MeanGreen|Seg2_Area|MeanRed|MeanGreen|Seg3_Area|MeanRed|MeanGreen|Seg4_Area|MeanRed|MeanGreen|Seg5_Area|MeanRed|MeanGreen|Seg6_Area|MeanRed|MeanGreen|Seg7_Area|MeanRed|MeanGreen|Seg8_Area|MeanRed|MeanGreen|Seg9_Area|MeanRed|MeanGreen|
-|---|---|---||---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|#File|Area|MidLineLength|Seg0\_Area|MeanRed|MeanGreen|Seg1\_Area|MeanRed|MeanGreen|Seg2\_Area|MeanRed|MeanGreen|Seg3\_Area|MeanRed|MeanGreen|Seg4\_Area|MeanRed|MeanGreen|Seg5\_Area|MeanRed|MeanGreen|Seg6\_Area|MeanRed|MeanGreen|Seg7\_Area|MeanRed|MeanGreen|Seg8\_Area|MeanRed|MeanGreen|Seg9\_Area|MeanRed|MeanGreen|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 |VID9152_A1_1_2024y09m14d_16h49m.tif|514691|845.128945|0|0.000000|0.000000|86232|0.000000|0.000000|56256|0.000000|0.000000|60919|0.000000|0.000000|63416|0.000000|0.000000|0|0.000000|0.000000|127374|0.000000|0.000000|0|0.000000|0.000000|103029|0.000000|0.000000|16277|0.000000|0.000000|
 |VID9152_A3_1_2024y09m14d_16h49m.tif|324919|872.698925|22566|0.000000|0.000000|31994|0.000000|0.000000|49236|0.000000|0.000000|52750|0.000000|0.000000|42570|0.000000|0.000000|35679|0.000000|0.000000|30334|0.000000|0.000000|25252|0.000000|0.000000|21259|0.000000|0.000000|13279|0.000000|0.000000|
 
